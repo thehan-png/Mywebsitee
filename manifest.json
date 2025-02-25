@@ -1,0 +1,22 @@
+{
+  "name": "Aplikasi orang sigma",
+  "short_name": "Orang sigma",
+  "description": "Aplikasi database berbasis web",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#6200ea",
+  "icons": [
+    {
+      "src": "storage/emulated/0/Game/bulan.png",
+      "sizes": "348x227",
+      "type": "image/png"
+    },
+    {
+      "src": "storage/emulated/0/Game/bulan.png",
+      "sizes": "348x227",
+      "type": "image/png"
+    }
+  ]
+  "orientation": "portrait"
+}

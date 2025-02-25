@@ -1,9 +1,0 @@
-{
-  "name": "Apk orang sigma",
-  "short_name": "Orang sigma",
-  "description": "Aplikasi database berbasis web",
-  "start_url": "/",
-  "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#000000"
-}

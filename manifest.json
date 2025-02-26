@@ -1,0 +1,22 @@
+{
+  "name": "Database App",
+  "short_name": "Database",
+  "description": "Aplikasi database berbasis web",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000"
+  
+  "icons": [
+  {
+    "src": "/bulan.png",
+    "type": "image/png",
+    "sizes": "192x192"
+  },
+  {
+    "src": "/bulan.png",
+    "type": "image/png",
+    "sizes": "512x512"
+  }
+]
+}

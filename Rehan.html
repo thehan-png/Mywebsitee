@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Halaman Ganti Tanpa Reload</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    .page {
+      display: none;
+      opacity: 0;
+      transform: translateX(30px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    .active {
+      display: block;
+      opacity: 1;
+      transform: translateX(0);
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      border: none;
+      background: black;
+      color: white;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background: #333;
+    }
+  </style>
+</head>
+<body>
+  <!-- Halaman 1 -->
+  <div id="halaman1" class="page active">
+    <h1>✨ Ini Halaman 1 ✨</h1>
+    <button onclick="gantiHalaman('halaman2')">➡️ Ke Halaman 2</button>
+  </div>
+
+  <!-- Halaman 2 -->
+  <div id="halaman2" class="page">
+    <h1>🚀 Ini Halaman 2 🚀</h1>
+    <button onclick="gantiHalaman('halaman1')">⬅️ Kembali ke Halaman 1</button>
+  </div>
+
+  <script>
+    function gantiHalaman(id) {
+      let pages = document.querySelectorAll('.page');
+      let target = document.getElementById(id);
+
+      // sembunyiin semua dulu
+      pages.forEach(page => {
+        if (page.classList.contains('active')) {
+          page.classList.remove('active');
+          setTimeout(() => {
+            page.style.display = "none";
+          }, 500); // biarin animasi keluar dulu
+        }
+      });
+
+      // munculin target
+      target.style.display = "block";
+      setTimeout(() => {
+        target.classList.add('active');
+      }, 50);
+    }
+  </script>
+</body>
+</html>
